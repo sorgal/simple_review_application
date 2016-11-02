@@ -1,0 +1,8 @@
+h1 
+  = t('.reviews')
+div class='add-review-button-container'
+  == link_to t(:add_review), new_review_path, class: 'btn btn-primary'  
+div
+  = render partial: 'reviews', locals: { reviews: @reviews }
+div class="pagination"
+  = will_paginate @reviews, renderer: BootstrapPagination::Rails

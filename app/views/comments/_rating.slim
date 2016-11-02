@@ -1,0 +1,9 @@
+div class="dropdown rating" data-object-id=object.id data-object-type=rating_object_type(object)
+  button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+    span class='rating_header'
+      == t('.rate', subject: rating_object_type(object))
+    span class="caret"
+  ul class="dropdown-menu" aria-labelledby="dropdownMenu1"
+    - 5.times do | i |
+      li class='rating'
+        == link_to i + 1, 'javascript:void(0)'

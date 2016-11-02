@@ -1,0 +1,9 @@
+tr class="review_comment"
+  td
+    == comment.comment_text
+  td
+    == t('.published', date: comment.created_at.strftime('%d.%m.%Y'))
+  td class="rating_container"
+    == t(:rating, value:  average_rating_for(comment))
+  td
+    = render partial: 'comments/rating', locals: { object: comment }

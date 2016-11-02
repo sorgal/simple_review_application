@@ -1,0 +1,41 @@
+table#reviews td.actions {
+  width: 44px !important;
+}
+
+td.new-comment-form textarea {
+  width: 100% !important;
+}
+
+td.new-comment-form {
+  width: 90% !important;
+}
+
+table.comments tr:last-of-type {
+  border-style: hidden !important;
+}
+
+table#reviews td.actions div.btn-group {  
+  margin-top: 8px !important;
+}
+
+table.comments {
+  table-layout: fixed;
+  margin-bottom: -10px !important;
+}
+
+td.new-comment-form fieldset.actions {
+  padding-left: 0px;
+  margin-top: -15px !important;
+}
+
+table.comments tr.review_comment td:first-child {
+  width: 50% !important;
+}
+
+table.comments tr.review_comment {
+  border-top-style: hidden !important;
+}
+
+div.add-review-button-container {
+  margin-bottom: 10px;
+}

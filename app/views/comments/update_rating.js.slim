@@ -1,0 +1,10 @@
+| $('nav.navbar.navbar-default').after('
+= flash_messages
+| ');
+| var rating_drop = $('div.dropdown.rating[data-object-id="#{@comment.id}"][data-object-type="comment"] button#dropdownMenu1 span.rating_header');
+| rating_drop.text('
+= t('comments.rating.rate', subject: 'comment')
+| ');
+| rating_drop.closest('tr.review_comment').find('td.rating_container').text('
+= t(:rating, value: average_rating_for(@comment))
+| ');

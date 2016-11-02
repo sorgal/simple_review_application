@@ -1,0 +1,8 @@
+table class="table comments"
+  - comments.each do | comment |
+    = render partial: 'comments/comment', locals: { comment: comment }
+  tr
+    td class='new-comment-form' id="new_comment_for_#{review.id}" colspan=3
+      = render partial: 'comments/form', locals: { comment: review.comments.build }
+    td
+      = render partial: 'comments/rating', locals: { object: review }

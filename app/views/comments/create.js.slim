@@ -1,0 +1,23 @@
+| $('nav.navbar.navbar-default').after('
+= flash_messages
+| ');
+| var el = $('#new_comment_for_#{@comment.review_id}').closest('tr');
+| el.find('textarea').val('');
+| el.find('span.rating_header').text('
+= t('comments.rating.rate', subject: 'review')
+| ');
+- unless @comment.new_record?
+  - review = @comment.review
+  | $('tr#review-#{review.id} td.actions span:last').text('
+  = t(:rating, value: average_rating_for(review))
+  | ');
+  | var el_comment = $('tr#review-#{review.id} tr.review_comment:last');
+  | if (el_comment.length) { 
+  | el_comment.after('
+  = j render(partial: 'comments/comment', locals: { comment: @comment })
+  | ');
+  |} else {
+  | el.before('
+  = j render(partial: 'comments/comment', locals: { comment: @comment })
+  | ');
+  |}
