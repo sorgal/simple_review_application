@@ -15,4 +15,4 @@ gem 'will_paginate'
 gem 'formtastic'
 gem 'will_paginate-bootstrap'
 gem 'uglifier'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production

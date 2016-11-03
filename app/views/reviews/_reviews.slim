@@ -6,4 +6,9 @@ table id="reviews" class="table"
         span
           == t(:rating, value:  average_rating_for(review))
       td
+        div class="review_text"
+          h4
+            == t('.header')
+          div
+            == review.review_text 
         = render partial: 'comments/comments', locals: { comments: review.comments, review: review }

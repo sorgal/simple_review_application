@@ -17,6 +17,8 @@ en:
       reviews: 'Reviews'
     review_actions:
       actions: 'Actions'
+    reviews:
+      header: 'Review text'
     edit:
       edit_review: 'Edit review'
     create:

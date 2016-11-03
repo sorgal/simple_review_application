@@ -39,3 +39,15 @@ table.comments tr.review_comment {
 div.add-review-button-container {
   margin-bottom: 10px;
 }
+
+div.review_text {
+  margin-left: 10px;
+  border: 1px solid #ddd;
+  border-top-style: hidden !important;
+  border-left-style: hidden !important;
+  border-right-style: hidden !important;
+}
+
+div.review_text div {
+  margin-bottom: 10px;
+}
